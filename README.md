@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# RxJS 示例项目
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+这是一个使用 React + TypeScript + RxJS 构建的示例项目，用于展示 RxJS 在 React 应用中的各种使用场景。
 
-Currently, two official plugins are available:
+## 技术栈
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- RxJS 7.8
+- Vite 6
+- ESLint
 
-## Expanding the ESLint configuration
+## 项目结构
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+├── src/
+│   ├── components/     # React 组件
+│   ├── assets/        # 静态资源
+│   ├── App.tsx        # 主应用组件
+│   ├── main.tsx       # 应用入口
+│   └── index.css      # 全局样式
+├── public/            # 公共资源
+└── package.json       # 项目配置
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 开始使用
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 环境要求
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Node.js >= 18
+- npm >= 9
+
+### 安装依赖
+
+```bash
+npm install
 ```
+
+### 开发环境运行
+
+```bash
+npm run dev
+```
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+### 预览生产版本
+
+```bash
+npm run preview
+```
+
+## 功能特性
+
+- 使用 RxJS 处理异步数据流
+- TypeScript 类型支持
+- 现代化的开发体验
+- 响应式编程示例
